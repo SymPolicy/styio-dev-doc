@@ -1,0 +1,22 @@
+# General-Auditor
+
+[General-Auditor](https://github.com/Unka-Malloc/General-Auditor) is the shared audit source for SymPolicy, Meshrix-Platform and LicoLand.
+Each repository event applies common policy and that repository's profile only.
+The workflow uses `Unka-Malloc/General-Auditor@only` and retains existing required audit status contexts.
+
+Privacy, license, dependency, repository-policy and evidence findings are reviewed
+in context by a contributor's local Agent. Hardcoded keyword matches are warnings,
+not automatic leakage judgments. CI does not invoke a paid Agent service.
+
+Local staged, working-tree, outgoing-range and reachable-history scans use the
+[maintained initialization instructions](https://github.com/Unka-Malloc/General-Auditor/blob/only/docs/initialization.md).
+The expanded local scope implementation is delivered by
+[General-Auditor PR #1](https://github.com/Unka-Malloc/General-Auditor/pull/1).
+Reports with redacted evidence remain local unless explicitly published.
+
+The central public report uses Actions artifacts and Pages, retains 30 days,
+and updates each repository independently after its scan completes.
+Auditor changes require a maintainer's temporary-branch PR to `only`.
+
+- [Audit, License, and Dependency Compliance](../standards/audit-license-and-dependency-policy.md)
+- [Repository Matrix and Source Priority](repository-matrix.md)

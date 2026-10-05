@@ -27,13 +27,13 @@ It does **not** own:
 When building platform capabilities, follow this order:
 
 1. **Align the contract first**: platform-client interaction, including `Spio`, depends heavily on published API contracts and the Registry Protocol. Any I/O change must start with API design agreement.
-2. **Respect security audits**: because user assets are involved, any change to authentication, key management, or persisted state must follow data security rules from `styio-audit`.
+2. **Respect security audits**: because user assets are involved, any change to authentication, key management, or persisted state must follow data security rules from `General-Auditor`.
 3. **Document architecture before implementation**: update `docs/design/`, OpenAPI definitions, or GraphQL schemas before backend implementation.
 
 ## Relationship to Other Repositories
 
 - **Upstream service for `Spio`**: the platform is the distributor and validator of package data. When a client performs `publish` or `fetch`, the platform makes the final decision.
-- **Consumer of `styio-audit` policies**: the platform does not hard-code risk blacklists. It consumes manifest inventory and security policies from the audit framework.
+- **Consumer of `General-Auditor` policies**: the platform does not hard-code risk blacklists. It consumes manifest inventory and security policies from the audit framework.
 - **Cloud collaboration with `Vityo`**: if endpoints such as iOS use cloud execution as the main path, the platform must provide secure sandboxing and execution routing.
 
 ## Validation and Release

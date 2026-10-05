@@ -11,7 +11,7 @@
 | `styio` | 语言与编译器主仓库 | 语言语义、编译器实现、CLI、测试、主设计/规格文档 |
 | `Spio` | 包管理器 | manifest、lockfile、resolver、workflow、`styio-protocol` 消费 |
 | `styio-platform` | 平台与云服务 | 服务内核、registry distribution、regional node、worker control、平台交付门禁 |
-| `styio-audit` | 审计框架 | 跨仓库 audit gate、许可证策略、商业风险、manifest inventory、secret 扫描 |
+| `General-Auditor` | 审计框架 | 跨仓库 audit gate、许可证策略、商业风险、manifest inventory、secret 扫描 |
 | `styio-dev-doc` | 开发者文档 | 跨仓库维护手册、开发流程、协作规范 |
 | `styio-dev-env` | 标准开发环境 | toolchain bootstrap、环境脚本、统一环境约定 |
 | `styio-book` | 产品白皮书 | 对外叙述、愿景、产品级说明 |
@@ -65,7 +65,7 @@
 1. 语言、编译器、测试验收：回到 `styio`
 2. 包管理、resolver、contract 兼容：回到 `Spio`
 3. 平台服务、registry distribution、regional node、worker control：回到 `styio-platform`
-4. 审计框架、许可证策略、商业风险、manifest inventory、secret 扫描：回到 `styio-audit`
+4. 审计框架、许可证策略、商业风险、manifest inventory、secret 扫描：回到 `General-Auditor`
 5. IDE 产品交互、运行视图、主题和平台执行策略：回到 `Vityo`
 6. VS Code 或别的宿主编辑器设置、命令和集成方式：回到对应 Extension 仓
 7. 这份 GitBook 只负责归纳和维护流程，不反向覆盖各仓自己的 SSOT

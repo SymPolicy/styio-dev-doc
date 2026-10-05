@@ -23,9 +23,9 @@
 * [Vityo 协作指南](ecosystem/vityo-development.md)
 * [Extensions 协作指南](ecosystem/extensions-development.md)
 
-## styio-audit (审计与合规)
+## General-Auditor (审计与合规)
 
-* [styio-audit 协作指南](ecosystem/styio-audit-development.md)
+* [General-Auditor 协作指南](ecosystem/general-auditor-development.md)
 * [审计、许可证与依赖合规](standards/audit-license-and-dependency-policy.md)
 
 ## styio-benchmark (性能与基准)

@@ -2,13 +2,13 @@
 
 This page records audit inputs that all Styio-related repositories must maintain during development. It is not legal advice; it is an engineering gate that developers must satisfy before delivery.
 
-The current audit framework is maintained by `styio-audit` and scans these projects externally:
+The current audit framework is maintained by `General-Auditor` and scans these projects externally:
 
 - `styio` / local `styio-nightly`
 - `Spio`
 - `Vityo`
 - `styio-platform`
-- `styio-audit`
+- `General-Auditor`
 
 `styio-dev-doc` is the developer manual repository. It records processes and maintenance requirements, but it does not replace each project repository's own `LICENSE`, `LICENSE-POLICY.md`, `DEPENDENCY-USAGE.md`, docs gate, or audit gate.
 
@@ -26,7 +26,7 @@ If a repository still uses GPL-3.0 as the main Styio-family license, or package 
 
 ## Manifest Inventory Is a Blocking Input
 
-Every `styio-audit` project module must maintain these non-empty fields:
+Every `General-Auditor` project module must maintain these non-empty fields:
 
 1. `technology_stack`
 2. `internal_components`
@@ -38,7 +38,7 @@ Missing any of them prevents the audit from passing. Without technology stack, f
 When adding or removing languages, SDKs, runtimes, build systems, CI, package managers, platform runners, first-party modules, external components, or dependency manifests, update all of the following:
 
 1. The project repository's inventory document, such as `docs/specs/TECHNOLOGY-COMPONENT-INVENTORY.md`.
-2. The corresponding `for-styio*/module.json` project module in `styio-audit`.
+2. The corresponding repository profile under `profiles/SymPolicy/` in `General-Auditor`.
 3. The project repository's docs index / docs audit results.
 
 ## Commercial Risk Boundary
@@ -78,7 +78,7 @@ Developers must not write suspected secret values into documentation, logs, test
 To scan commit history:
 
 ```bash
-python3 -m styio_audit.cli secret-history --repo /path/to/repo --project <project> --format json
+See the current local audit commands in [General-Auditor](https://github.com/Unka-Malloc/General-Auditor/blob/only/docs/initialization.md).
 ```
 
 If a real secret appears in history, changing the latest file is not enough. The project security process must rotate credentials, record impact scope, and decide whether history cleanup is required.
@@ -89,9 +89,9 @@ For license, dependency, technology stack, external component, or audit rule cha
 
 1. Identify which repository owns the change. Do not put cross-repository rules into single-repository implementation details.
 2. Update the project repository's `LICENSE`, `LICENSE-POLICY.md`, `DEPENDENCY-USAGE.md`, and inventory documents.
-3. Update the default module or project module in `styio-audit`.
-4. Run `styio-audit` module validation and unit tests.
-5. Run `styio-audit gate --framework-only` against the target repository.
+3. Update the default module or project module in `General-Auditor`.
+4. Run `General-Auditor` module validation and unit tests.
+See the current local audit commands in [General-Auditor](https://github.com/Unka-Malloc/General-Auditor/blob/only/docs/initialization.md).
 6. Run the target repository's docs index, docs audit, repo hygiene, and affected tests.
 7. After pushing, check GitHub Actions. Do not stop at local success.
 
@@ -100,12 +100,12 @@ Common commands:
 ```bash
 cd <styio-workspace>-audit
 python3 -m unittest discover -s tests -v
-python3 -m styio_audit.cli validate-modules
-python3 -m styio_audit.cli gate --repo . --project styio-audit --framework-only
-python3 -m styio_audit.cli gate --repo <styio-workspace> --project styio --framework-only
-python3 -m styio_audit.cli gate --repo <spio-workspace> --project Spio --framework-only
-python3 -m styio_audit.cli gate --repo <vityo-workspace> --project Vityo --framework-only
-python3 -m styio_audit.cli gate --repo <styio-platform-workspace> --project styio-platform --framework-only
+See the current local audit commands in [General-Auditor](https://github.com/Unka-Malloc/General-Auditor/blob/only/docs/initialization.md).
+See the current local audit commands in [General-Auditor](https://github.com/Unka-Malloc/General-Auditor/blob/only/docs/initialization.md).
+See the current local audit commands in [General-Auditor](https://github.com/Unka-Malloc/General-Auditor/blob/only/docs/initialization.md).
+See the current local audit commands in [General-Auditor](https://github.com/Unka-Malloc/General-Auditor/blob/only/docs/initialization.md).
+See the current local audit commands in [General-Auditor](https://github.com/Unka-Malloc/General-Auditor/blob/only/docs/initialization.md).
+See the current local audit commands in [General-Auditor](https://github.com/Unka-Malloc/General-Auditor/blob/only/docs/initialization.md).
 ```
 
 Project documentation gates usually are:

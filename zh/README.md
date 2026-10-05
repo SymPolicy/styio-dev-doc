@@ -21,7 +21,7 @@
 当你准备开始改动代码，需要理解全局背景：
 - **分层与流水线**：[分层架构](architecture/layered-architecture.md) | [编译器流水线](architecture/compiler-pipeline.md) | [源码目录地图](architecture/source-tree.md)
 - **环境与基础**：[构建工具链](toolchain/build-toolchain.md) | [styio-dev-env 用途说明](ecosystem/styio-dev-env-development.md)
-- **规范与合规**：[编码与重构规则](standards/coding-and-refactor-rules.md) | [styio-audit 协作指南](ecosystem/styio-audit-development.md) | [审计与合规](standards/audit-license-and-dependency-policy.md)
+- **规范与合规**：[编码与重构规则](standards/coding-and-refactor-rules.md) | [General-Auditor 协作指南](ecosystem/general-auditor-development.md) | [审计与合规](standards/audit-license-and-dependency-policy.md)
 - **质量与性能**：[测试与回归策略](standards/testing-and-regression.md) | [styio-benchmark 协作指南](ecosystem/styio-benchmark-development.md) | [CLI 与调试](toolchain/cli-and-debug-workflow.md)
 
 ### 🛠️ 实战：编译器本体维护 (Compiler Track)

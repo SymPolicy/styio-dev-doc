@@ -25,7 +25,7 @@ When you are ready to change code, first understand the system context:
 
 - **Layering and pipeline**: [Layered Architecture](architecture/layered-architecture.md) | [Compiler Pipeline](architecture/compiler-pipeline.md) | [Source Tree Map](architecture/source-tree.md)
 - **Environment and foundations**: [Build Toolchain](toolchain/build-toolchain.md) | [styio-dev-env Purpose](ecosystem/styio-dev-env-development.md)
-- **Standards and compliance**: [Coding and Refactoring Rules](standards/coding-and-refactor-rules.md) | [styio-audit Collaboration Guide](ecosystem/styio-audit-development.md) | [Audit and Compliance](standards/audit-license-and-dependency-policy.md)
+- **Standards and compliance**: [Coding and Refactoring Rules](standards/coding-and-refactor-rules.md) | [General-Auditor Collaboration Guide](ecosystem/general-auditor-development.md) | [Audit and Compliance](standards/audit-license-and-dependency-policy.md)
 - **Quality and performance**: [Testing and Regression Strategy](standards/testing-and-regression.md) | [styio-benchmark Collaboration Guide](ecosystem/styio-benchmark-development.md) | [CLI and Debugging](toolchain/cli-and-debug-workflow.md)
 
 ### Practice: Compiler Maintenance Track

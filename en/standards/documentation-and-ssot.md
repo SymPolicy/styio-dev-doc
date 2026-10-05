@@ -54,7 +54,7 @@ For more specific repository boundaries and source priorities, see:
 | New driver interface change | `Resource-Driver` |
 | Documentation structure change | `DOCUMENTATION-POLICY` and related indexes |
 | External dependency change | `THIRD-PARTY` |
-| Audit, license, or commercial-risk policy change | `styio-audit` module + project `LICENSE-POLICY.md` / `DEPENDENCY-USAGE.md` / inventory documents |
+| Audit, license, or commercial-risk policy change | `General-Auditor` module + project `LICENSE-POLICY.md` / `DEPENDENCY-USAGE.md` / inventory documents |
 
 ## Requirements for GitBook
 
