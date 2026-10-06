@@ -3,3 +3,6 @@ _book/
 .artifacts/
 .tmp-*.png
 .tmp-doc-server.log
+
+# Private General-Auditor source evidence and local reports.
+/.general-auditor/local/

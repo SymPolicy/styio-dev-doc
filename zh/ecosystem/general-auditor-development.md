@@ -10,12 +10,10 @@ not automatic leakage judgments. CI does not invoke a paid Agent service.
 
 Local staged, working-tree, outgoing-range and reachable-history scans use the
 [maintained initialization instructions](https://github.com/Unka-Malloc/General-Auditor/blob/only/docs/initialization.md).
-The expanded local scope implementation is delivered by
-[General-Auditor PR #1](https://github.com/Unka-Malloc/General-Auditor/pull/1).
-Reports with redacted evidence remain local unless explicitly published.
+Use the current `only` branch for the maintained CLI contract.
+Reports retain exact source-match values and context only in ignored repository-local `.general-auditor/local/` files. Never publish or upload them.
 
-The central public report uses Actions artifacts and Pages, retains 30 days,
-and updates each repository independently after its scan completes.
+CI checks do not generate reports or upload source evidence. Local scans create a self-contained HTML report in `.general-auditor/local/`; local contextual review determines whether a candidate is a real issue or false positive.
 Auditor changes require a maintainer's temporary-branch PR to `only`.
 
 - [Audit, License, and Dependency Compliance](../standards/audit-license-and-dependency-policy.md)
