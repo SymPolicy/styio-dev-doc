@@ -54,7 +54,7 @@
 | 新 driver 接口变化 | `Resource-Driver` |
 | 文档结构变化 | `DOCUMENTATION-POLICY` 和相关索引 |
 | 外部依赖变化 | `THIRD-PARTY` |
-| 审计、许可证或商业风险策略变化 | `styio-audit` 模块 + 项目仓 `LICENSE-POLICY.md` / `DEPENDENCY-USAGE.md` / inventory 文档 |
+| 审计、许可证或商业风险策略变化 | `General-Auditor` 模块 + 项目仓 `LICENSE-POLICY.md` / `DEPENDENCY-USAGE.md` / inventory 文档 |
 
 ## 对 GitBook 的要求
 

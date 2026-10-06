@@ -11,7 +11,7 @@ The following responsibility boundaries are organized from `styio/README.md` and
 | `styio` | Language and compiler repository | Language semantics, compiler implementation, CLI, tests, primary design and specification documents |
 | `Spio` | Package manager | Manifest, lockfile, resolver, workflow, and consumption of `styio-protocol` |
 | `styio-platform` | Platform and cloud services | Service core, registry distribution, regional nodes, worker control, and platform delivery gates |
-| `styio-audit` | Audit framework | Cross-repository audit gates, license policy, commercial risk, manifest inventory, and secret scanning |
+| `General-Auditor` | Audit framework | Cross-repository audit gates, license policy, commercial risk, manifest inventory, and secret scanning |
 | `styio-dev-doc` | Developer documentation | Cross-repository maintainer manual, development process, and collaboration rules |
 | `styio-dev-env` | Standard development environment | Toolchain bootstrap, environment scripts, and shared environment conventions |
 | `styio-book` | Product white paper | Public narrative, vision, and product-level explanation |
@@ -65,7 +65,7 @@ When multiple repositories disagree about the same topic:
 1. Language, compiler, and test acceptance: return to `styio`.
 2. Package management, resolver, and contract compatibility: return to `Spio`.
 3. Platform services, registry distribution, regional nodes, and worker control: return to `styio-platform`.
-4. Audit framework, license policy, commercial risk, manifest inventory, and secret scanning: return to `styio-audit`.
+4. Audit framework, license policy, commercial risk, manifest inventory, and secret scanning: return to `General-Auditor`.
 5. IDE product interaction, runtime views, themes, and platform execution policy: return to `Vityo`.
 6. VS Code or other host editor settings, commands, and integration: return to the corresponding extension repository.
 7. This GitBook summarizes and maintains process guidance; it does not override each repository's own SSOT.

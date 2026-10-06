@@ -23,9 +23,9 @@
 * [Vityo Collaboration Guide](ecosystem/vityo-development.md)
 * [Extensions Collaboration Guide](ecosystem/extensions-development.md)
 
-## styio-audit (Audit and Compliance)
+## General-Auditor (Audit and Compliance)
 
-* [styio-audit Collaboration Guide](ecosystem/styio-audit-development.md)
+* [General-Auditor Collaboration Guide](ecosystem/general-auditor-development.md)
 * [Audit, License, and Dependency Compliance](standards/audit-license-and-dependency-policy.md)
 
 ## styio-benchmark (Performance and Benchmarking)

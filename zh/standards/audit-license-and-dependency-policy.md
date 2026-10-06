@@ -2,13 +2,13 @@
 
 这页记录所有 Styio 相关仓库在开发时必须维护的审计输入。它不是法律意见；它是开发者交付前必须满足的工程门禁。
 
-当前审计框架由 `styio-audit` 维护，并外部扫描这些项目：
+当前审计框架由 `General-Auditor` 维护，并外部扫描这些项目：
 
 - `styio` / 本地 `styio-nightly`
 - `Spio`
 - `Vityo`
 - `styio-platform`
-- `styio-audit`
+- `General-Auditor`
 
 `styio-dev-doc` 是开发者手册仓库。它负责记录流程和维护要求，不替代项目仓库自己的 `LICENSE`、`LICENSE-POLICY.md`、`DEPENDENCY-USAGE.md`、docs gate 或 audit gate。
 
@@ -26,7 +26,7 @@ Apache-2.0 不使用 GPL 式 copyleft 继承。开发者不能再把“基于 St
 
 ## Manifest 清单是阻塞输入
 
-每个 `styio-audit` 项目模块都必须维护这些非空字段：
+每个 `General-Auditor` 项目模块都必须维护这些非空字段：
 
 1. `technology_stack`
 2. `internal_components`
@@ -38,7 +38,7 @@ Apache-2.0 不使用 GPL 式 copyleft 继承。开发者不能再把“基于 St
 当新增或删除语言、SDK、运行时、构建系统、CI、包管理器、平台 runner、第一方模块、外部组件或依赖 manifest 时，必须同时更新：
 
 1. 对应项目仓的 inventory 文档，例如 `docs/specs/TECHNOLOGY-COMPONENT-INVENTORY.md`。
-2. `styio-audit` 里的对应 `for-styio*/module.json` 项目模块。
+2. `General-Auditor` 里的对应 `for-styio*/module.json` 项目模块。
 3. 项目仓的 docs index / docs audit 结果。
 
 ## 商业风险边界
@@ -78,7 +78,7 @@ Styio 项目不使用需要商业授权、付费许可证、订阅、会员制�
 需要扫提交历史时，使用：
 
 ```bash
-python3 -m styio_audit.cli secret-history --repo /path/to/repo --project <project> --format json
+See the current local audit commands in [General-Auditor](https://github.com/Unka-Malloc/General-Auditor/blob/only/docs/initialization.md).
 ```
 
 如果历史中出现真实 secret，不能只改最新文件；必须按项目安全流程轮换凭据、记录影响范围，并决定是否需要历史清理。
@@ -89,9 +89,9 @@ python3 -m styio_audit.cli secret-history --repo /path/to/repo --project <projec
 
 1. 先确认改动属于哪个仓库，别把跨仓规则写进单仓实现细节。
 2. 更新项目仓自己的 `LICENSE`、`LICENSE-POLICY.md`、`DEPENDENCY-USAGE.md` 和 inventory 文档。
-3. 更新 `styio-audit` 的默认模块或项目模块。
-4. 跑 `styio-audit` 的模块校验和单元测试。
-5. 对目标仓库跑 `styio-audit gate --framework-only`。
+3. 更新 `General-Auditor` 的默认模块或项目模块。
+4. 跑 `General-Auditor` 的模块校验和单元测试。
+See the current local audit commands in [General-Auditor](https://github.com/Unka-Malloc/General-Auditor/blob/only/docs/initialization.md).
 6. 跑目标仓库自己的 docs index、docs audit、repo hygiene 和受影响测试。
 7. 推送后检查 GitHub Actions，不能只停在本地通过。
 
@@ -100,12 +100,12 @@ python3 -m styio_audit.cli secret-history --repo /path/to/repo --project <projec
 ```bash
 cd <styio-workspace>-audit
 python3 -m unittest discover -s tests -v
-python3 -m styio_audit.cli validate-modules
-python3 -m styio_audit.cli gate --repo . --project styio-audit --framework-only
-python3 -m styio_audit.cli gate --repo <styio-workspace> --project styio --framework-only
-python3 -m styio_audit.cli gate --repo <spio-workspace> --project Spio --framework-only
-python3 -m styio_audit.cli gate --repo <vityo-workspace> --project Vityo --framework-only
-python3 -m styio_audit.cli gate --repo <styio-platform-workspace> --project styio-platform --framework-only
+See the current local audit commands in [General-Auditor](https://github.com/Unka-Malloc/General-Auditor/blob/only/docs/initialization.md).
+See the current local audit commands in [General-Auditor](https://github.com/Unka-Malloc/General-Auditor/blob/only/docs/initialization.md).
+See the current local audit commands in [General-Auditor](https://github.com/Unka-Malloc/General-Auditor/blob/only/docs/initialization.md).
+See the current local audit commands in [General-Auditor](https://github.com/Unka-Malloc/General-Auditor/blob/only/docs/initialization.md).
+See the current local audit commands in [General-Auditor](https://github.com/Unka-Malloc/General-Auditor/blob/only/docs/initialization.md).
+See the current local audit commands in [General-Auditor](https://github.com/Unka-Malloc/General-Auditor/blob/only/docs/initialization.md).
 ```
 
 项目仓文档门禁通常是：
